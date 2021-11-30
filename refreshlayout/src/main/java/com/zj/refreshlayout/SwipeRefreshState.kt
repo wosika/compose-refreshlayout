@@ -70,8 +70,8 @@ class SwipeRefreshState(
 
     internal suspend fun animateOffsetTo(offset: Float) {
         mutatorMutex.mutate {
-            _indicatorOffset.animateTo(offset)
             updateHeaderState()
+            _indicatorOffset.animateTo(offset)
         }
     }
 
